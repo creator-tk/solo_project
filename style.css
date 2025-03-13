@@ -2,6 +2,7 @@
   font-family:sans-serif;
   box-sizing: border-box;
   margin: 0px;
+  transition: 300ms;
 }
 h1 {
   font-size: clamp(1.5rem, 5vw, 2rem);
@@ -60,19 +61,31 @@ button{
   color: white;
   font-weight: bold;
 }
-
+.menu{
+  display: none;
+}
 .hero{
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-areas: "left center right";
   align-items: center;
   padding: 1vw 5vw;
   gap: 3%;
   text-align: center;
   background-color: rgb(245, 240, 240);
 }
+.hero_left{
+  grid-area: left;
+}
+.hero_center{
+  grid-area: center;
+}
+.hero_right{
+  grid-area:right;
+}
 .hero_img{
-  height: 20%;
-  width: 20%;
+  height: 100%;
+  width: 100%;
 }
 .features_container{
   background-color: #043A53;
@@ -88,6 +101,10 @@ button{
   gap: 3%;
   margin: 10px 10px;
   align-items: center;
+}
+.feature_img{
+  width: 100%;
+  height: 100%;
 }
 .benefits{
   margin: 3% 10%;
@@ -127,6 +144,13 @@ button{
   grid-template-columns: 1fr 1fr;
   gap: 3%;
   align-items: center;
+  grid-template-areas: "left right";
+}
+.report_left{
+  grid-area: left;
+}
+.report_right{
+  grid-area: right;
 }
 .testimonials{
   margin: 3% 10%;
@@ -155,7 +179,10 @@ button{
 }
 .card_container img{
   width: 100%;
-  height: 230px;
+  height: auto;
+}
+.card h5{
+  font-size: large;
 }
 .customer_service{
   background-color: black;
@@ -176,7 +203,7 @@ button{
 .more_options{
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr 1fr;
-  gap: 20%;
+  gap: 5%;
 }
 .developer_section{
   display: flex;
@@ -188,4 +215,87 @@ button{
   width: 50%;
   border: 1px solid gray;
   border-radius: 5px;
+}
+.developer_card img{
+  width: 50px;
+  height: auto;
+}
+
+@media screen and (max-width: 750px) {
+  .top_navbar, .login_signup {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas: 
+      "center center"
+      "left right";
+    text-align: center;
+  }
+
+  .hero_center {
+    grid-area: center;
+    grid-column: span 2;
+  }
+
+  .hero_left {
+    grid-area: left;
+  }
+
+  .hero_right {
+    grid-area: right;
+  }
+
+  .hero_img {
+    width: 80%;
+    height: auto;
+  }
+
+  .hero_left, .hero_right {
+    text-align: center;
+  }
+  .feature_text{
+    grid-template-columns: 1fr;
+  }
+  .benefits{
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+  }
+  .benefit{
+    flex-direction: column;
+  }
+  .card h5{
+    font-size: medium;
+  }
+  .more_options{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .benefit_container{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .founder{
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+  }
+  .reports{
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+  }
+  .card_container{
+    flex-direction: column;
+  }
 }
