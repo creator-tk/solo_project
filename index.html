@@ -11,16 +11,16 @@
   <header class="header">
 
     <div class="logo_container">
-      <img src="./assets/Logo (1).png" alt="Trustco Logo" class="logo">
+      <img src="./assets/Logo (1).png" alt="Trustco Logo" class="logo" id="logo">
     </div>
 
     <nav class="top_navbar">
       <ul class="top_navbar_list">
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Solutions</a></li>
-        <li><a href="#">Company</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#company">Company</a></li>
+        <li><a href="#resource">Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -36,12 +36,12 @@
   <br>
 
   <!--Hero section-->
-  <main>   
+  <main id="main_page">   
     <section class="hero">
       <img src="./assets/hero 6.png" alt="Hero Image" class="hero_img hero_left">
 
       <div class="hero_content hero_center">
-        <h1 class="hero_title">Find a Hign-Potential Customer with <span style="color: rgb(19, 55, 153);">Trustco</span></h1>
+        <h1 class="hero_title">Find a Hign-Potential Customer with <span style="color: rgb(19, 55, 153);">Trustco</span></h1><br>
         <p style="font-size: 1vw;">We provide sales team and professionals with the knowledge, skill and descripline they need to be 10x more successfull</p>
         <div style="margin-top: 20px;">
           <button class="pri_btn" >Get Started</button>
@@ -52,7 +52,7 @@
     </section>
     <br>
 
-    <section class="features">
+    <section class="features" id="features">
       <div class="brands_container">
         <p>Trusted by the best in the world</p>
         <div class="brands">
@@ -83,7 +83,7 @@
     </section>
     <br>
 
-    <section class="benefits">
+    <section class="benefits" id="solutions">
       <div>
         <p class="pri_btn" style="width: fit-content;">Beneficial</p>
         <br>
@@ -139,7 +139,7 @@
     </section>
     <br>
 
-    <section class="founder">
+    <section class="founder" id="company">
       <div>
         <h1>Meet Our Founder</h1>
         <br>
@@ -210,7 +210,7 @@
     </section>
 
     <br>
-    <section class="news">
+    <section class="news" id="resource">
       <h1>Whats new on Trustco.?</h1>
       <br>
       <div class="card_container">
@@ -256,12 +256,12 @@
     </section>
 
     <br>
-    <section class="customer_service">
+    <section class="customer_service" id="contact">
       <div>
         <h1>Take Your Customer Service To The Next Level</h1>
         <br>
-        <button class="pri_btn" style="background-color: gold;">Get 14 Days Free Trail</button>
-        <br>  
+        <button id="service" class="pri_btn" style="background-color: gold;">Get 14 Days Free Trail</button>
+        <br> <br>  
         <p>No credit card required.</p>
       </div>
 
@@ -269,6 +269,81 @@
         <img src="assets/customer_service.png" alt="Customer Service Image">
       </div>
     </section>
+  </main>
+
+  <!--Contact Page-->
+  <main id="service_page" style="margin: 3% 10%;" class="service_page">
+    <div class="contact">
+      <div class="contact_header">
+        <h1>We are here to help </h1><br>
+        <p>Contact us if you have any questions about our company. Our best team will provide your answer within a few hours.</p>
+      </div><br>
+
+      <!--Ways to contact-->
+      <div class="contact_container">
+        <div class="contact_card">
+          <img src="assets/Email.png" alt="">
+
+          <div>
+            <h3>Email Us</h3>
+            <p>Ask anything by emailing us and we will respond within a few days.</p> 
+          </div>
+
+          <div>
+            <p>Send Email</p>
+          </div>
+        </div>
+
+        <div class="contact_card">
+          <img src="/assets/Location.png" alt="">
+
+          <div>
+            <h3>Email Us</h3>
+            <p>Ask anything by emailing us and we will respond within a few days.</p> 
+          </div>
+
+          <div>
+            <p>Send Email</p>
+          </div>
+        </div>
+
+        <div class="contact_card">
+          <img src="/assets/Call.png" alt="">
+
+          <div>
+            <h3>Email Us</h3>
+            <p>Ask anything by emailing us and we will respond within a few days.</p>
+          </div>
+
+          <div>
+            <p>Send Email</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <br>
+    <!--Contact Form-->
+    <div class="contact_form">
+
+      <h1>Leave us a message</h1><br>
+      <p>Contact us if you have any questions about our company. Our best team will provide your answer within a few hours</p>
+      <br>
+      <form action="" class="form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <input type="text" placeholder="Company Name">
+        <input type="text" placeholder="Phone Number">
+        <textarea class="text_area" name="" id="" cols="30" rows="10" placeholder="How we can help?"></textarea>
+        <div class="submit_form">
+          <div>
+            <input type="checkbox" name="terms" id="terms">
+            <label for="terms">I agree to the terms and conditions</label> 
+          </div>
+          <button class="pri_btn">Send Message</button>
+        </div>
+      </form>
+    </div>
   </main>
   <br>
 
@@ -313,7 +388,7 @@
         <br>
         <p style="text-align: center; color: gray;">Collaborators</p>
         <br>
-        <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 10px; gap: 10px;">
+        <div class="developers">
           <img src="assets/Ellipse 3.png" alt="developer">
           <img src="assets/Ellipse 6.png" alt="developer">
           <img src="assets/Ellipse 3.png" alt="developer">
@@ -334,5 +409,7 @@
       </select>
     </div>
   </footer>
+
+  <script src="/index.js"></script>
 </body>
 </html>

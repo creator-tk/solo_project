@@ -13,6 +13,9 @@ h1 {
 p, button{
   font-size:10px;
 }
+.logo{
+  cursor: pointer;
+}
 .pri_btn{
   background-color: #043A53;
   color: white;
@@ -250,10 +253,18 @@ button{
   align-items: center;
 
 }
+
 .developer_card{
   width: 50%;
   border: 1px solid gray;
   border-radius: 5px;
+}
+.developers{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  margin-bottom: 10px;
 }
 .developer_card img{
   width: 50px;
@@ -275,7 +286,71 @@ button{
 .credit_right{
   grid-area: right;
 }
-
+.contact{
+  padding: 10% 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact h1, .contact p, .contact_form h1, .contact_form p{
+  text-align: center;
+}
+.contact_header{
+  width: 60%;
+}
+.contact_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3%;
+}
+.contact_card{
+  border: 1px solid gray;
+  padding: 5%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+  box-shadow: 0px 0px 10px 0px gray;
+}
+.contact_card img{
+  width: 50px;
+  height: auto;
+}
+.contact_card p{
+  text-align: left;
+  font-size: small;
+  color: gray;
+  margin-top: 5px;
+}
+.form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3%;
+}
+.form input{
+  padding: 2%;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin: 5px 0px;
+}
+.text_area{
+  grid-column: span 2;
+  border-radius: 5px;
+  margin: 5px 0px;
+  padding: 2%;
+}
+.submit_form{
+  display: flex;
+  grid-column: span 2;
+  justify-content: space-between;
+}
+.hide_content{
+  display: none;
+}
+.service_page{
+  display:none
+}
 @media screen and (max-width: 800px) {
   .top_navbar, .login_signup {
     display: none;
@@ -387,6 +462,9 @@ button{
     margin:5px ;
     font-size: small;
   }
+  .developer_card{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width:400px) {
@@ -414,5 +492,14 @@ button{
   .achievements{
     grid-template-columns: 1fr 1fr;
   }
-  
+  .contact_container{
+    grid-template-columns: 1fr;
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+  }
+  .submit_form{
+    flex-direction: column;
+  }
 }
